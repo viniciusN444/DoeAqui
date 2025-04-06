@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+:root{
+    --colorButton: #4589C8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo{
+    position: relative;
+    padding-bottom: 130px;
+}
+
+header img{
+    width: 50%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+}
+
+main h1{
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+
+p{
+    margin: 100px auto 0 auto;
+    width: 90%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.botoes{
+    width: 100%;
+    margin-top: 60px;
+}
+.botoes button{
+    background-color: var(--colorButton);
+    color: white;
+    border: none;
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+}
+
+.botoes button:hover{
+    background-color: #4589c8db;
+    transition: .5s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
