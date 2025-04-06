@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+:root{
+    --colorButton: #4589C8;
+    --corFundo: #F5F5F5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas', sans-serif;
+}
+
+body{
+    background-color: var(--corFundo);
+}
+
+header{
+    background-color: white;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 20px;
+}
+
+/* .card{
+    display: none;
+} */
+
+#mensagem{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card{
+    background-color: white;
+    margin: 15px auto;
+    width: 80%;
+    padding: 15px;
+}
+
+.card h2{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card .descricao{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.card .nome {
+   margin-bottom: 10px; 
+}
+
+button{
+    background-color: var(--colorButton);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: #4589c8db;
+    transition: .5s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
