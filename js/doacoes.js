@@ -22,13 +22,26 @@ if (listaDoacoes.length > 0) {
     listaDoacoes.forEach(doacao => {
         const card = document.createElement("div");
         card.classList.add("card");
+
+        // Dados da doação
+        const tipo = doacao.tipo || "doação";
+        const descricao = doacao.descricao || "sem descrição";
+        const nome = doacao.nome || "Anônimo";
+        const telefone = doacao.telefone?.replace(/\D/g, ""); // Remove tudo que não é número
+
+        // Monta a mensagem e link do WhatsApp
+        const textoMensagem = `Olá, vi sua publicação sobre ${tipo} no site e gostaria de ajudar.`;
+        const linkWhatsapp = `https://wa.me/55${telefone}?text=${encodeURIComponent(textoMensagem)}`;
+
+        // Monta o card
         card.innerHTML = `
-            <h2>${doacao.tipo || "Sem título"}</h2>
-            <p class="descricao">${doacao.descricao || "Sem descrição"}</p>
-            <p class="nome"><strong>Nome:</strong> ${doacao.nome || "Anônimo"}</p>
+            <h2>${tipo}</h2>
+            <p class="descricao">${descricao}</p>
+            <p class="nome"><strong>Nome:</strong> ${nome}</p>
             <p class="telefone"><strong>Telefone:</strong> ${doacao.telefone || "Sem número"}</p>
-            <button>Quero Ajudar</button>
+            <button onclick="window.open('${linkWhatsapp}', '_blank')">Quero Ajudar</button>
         `;
+
         container.appendChild(card);
     });
 } else {
