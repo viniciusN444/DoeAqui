@@ -19,17 +19,26 @@
         <form>
             <div class="campo">
                 <label for="txtNome">Nome</label>
-                <input type="text" id="txtNome">
+                <input type="text" id="txtNome" placeholder="ex: Vinícius Oliveira" required>
             </div>
 
             <div class="campo">
                 <label for="tipoDoacao">Tipo de Doação</label>
-                <input type="text" id="tipoDoacao">
+                <input type="text" id="tipoDoacao" placeholder="ex: Roupas de bebe" required>
             </div>
 
             <div class="campo">
+                <label for="telefone">Número de telefone:</label>
+                <input type="tel" id="telefone" name="telefone"
+                       pattern="[0-9]{10,11}" maxlength="11"
+                       placeholder="Apenas números, ex: 11999998888"
+                       required>
+            </div>
+            
+
+            <div class="campo">
                 <label for="descricao">Descrição</label>
-                <textarea id="descricao"></textarea>
+                <textarea id="descricao" placeholder="ex: Roupas de bebe em perfeito estado, tamanho 4." required></textarea>
                 <button>Cadastrar</button>
             </div>
 
