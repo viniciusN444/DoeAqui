@@ -1,22 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-:root{
+:root {
     --colorButton: #4589C8;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bebas', sans-serif;
 }
 
-body{
+body {
     background-color: #F5F5F5;
 }
 
-main{
+i {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+
+i:hover {
+    color: var(--colorButton);
+    transition: .4s ease;
+}
+
+
+main {
     width: 90%;
     margin: auto;
     position: absolute;
@@ -25,12 +39,12 @@ main{
     transform: translate(-50%, -50%);
 }
 
-main h1{
+main h1 {
     text-align: center;
     margin: 10px 0;
 }
 
-form{
+form {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,27 +52,28 @@ form{
     gap: 10px;
 }
 
-label{
+label {
     font-weight: bold;
 }
 
-.campo{
+.campo {
     width: 300px;
     display: flex;
     justify-content: space-between;
     flex-flow: column nowrap;
 }
 
-.campo input,textarea{
+.campo input,
+textarea {
     padding: 10px;
     width: 100%;
 }
 
-textarea{
+textarea {
     height: 150px;
 }
 
-button{
+button {
     background-color: var(--colorButton);
     border: none;
     color: white;
@@ -67,7 +82,7 @@ button{
     margin-top: 10px;
 }
 
-button:hover{
+button:hover {
     background-color: #4589c8db;
     transition: .5s ease;
     font-weight: bold;
